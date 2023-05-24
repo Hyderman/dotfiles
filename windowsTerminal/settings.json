@@ -10,6 +10,13 @@
         {
             "command": 
             {
+                "action": "closeTab"
+            },
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
@@ -29,6 +36,10 @@
             "keys": "ctrl+shift+f"
         },
         {
+            "command": "unbound",
+            "keys": "ctrl+w"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
@@ -36,6 +47,10 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "closePane",
+            "keys": "alt+shift+w"
         },
         {
             "command": 

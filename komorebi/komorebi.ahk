@@ -23,9 +23,9 @@ EnsureNamedWorkspaces(0, "I II III IV V")
 NamedWorkspaceLayout("I", "bsp")
 
 ; Set the gaps around the edge of the screen for a workspace
-NamedWorkspacePadding("I", 20)
+NamedWorkspacePadding("I", 10)
 ; Set the gaps between the containers for a workspace
-NamedWorkspaceContainerPadding("I", 20)
+NamedWorkspaceContainerPadding("I", 10)
 
 ; You can assign specific apps to named workspaces
 ; NamedWorkspaceRule("exe", "Firefox.exe", "III")
@@ -41,54 +41,55 @@ InvisibleBorders(7, 0, 14, 7)
 CompleteConfiguration()
 
 ; Focus windows
-!h::Focus("left")
-!j::Focus("down")
-!k::Focus("up")
-!l::Focus("right")
-!+[::CycleFocus("previous")
-!+]::CycleFocus("next")
+<#h::Focus("left")
+<#j::Focus("down")
+<#k::Focus("up")
+<#l::Focus("right")
+<#[::CycleFocus("previous")
+<#]::CycleFocus("next")
 
 ; Move windows
-!+h::Move("left")
-!+j::Move("down")
-!+k::Move("up")
-!+l::Move("right")
-!+Enter::Promote()
+<#+h::Move("left")
+<#+j::Move("down")
+<#+k::Move("up")
+<#+l::Move("right")
+<#+Enter::Promote()
 
 ; Stack windows
-!Left::Stack("left")
-!Right::Stack("right")
-!Up::Stack("up")
-!Down::Stack("down")
-!;::Unstack()
-![::CycleStack("previous")
-!]::CycleStack("next")
+<#Left::Stack("left")
+<#Right::Stack("right")
+<#Up::Stack("up")
+<#Down::Stack("down")
+<#;::Unstack()
+<!#[::CycleStack("previous")
+<!#]::CycleStack("next")
 
 ; Resize
-!=::ResizeAxis("horizontal", "increase")
-!-::ResizeAxis("horizontal", "decrease")
-!+=::ResizeAxis("vertical", "increase")
-!+-::ResizeAxis("vertical", "decrease")
+<#=::ResizeAxis("horizontal", "increase")
+<#-::ResizeAxis("horizontal", "decrease")
+<#+=::ResizeAxis("vertical", "increase")
+<#+-::ResizeAxis("vertical", "decrease")
 
 ; Manipulate windows
-!t::ToggleFloat()
-; !+f::ToggleMonocle()
-!+f::ToggleMaximize()
+<#t::ToggleFloat()
+<#f::ToggleMonocle()
+<#+f::ToggleMaximize()
+<#w::Close()
 
 ; Window manager options
-!+r::Retile()
-!p::TogglePause()
+<#+r::Retile()
+<#p::TogglePause()
 
 ; Layouts
-!x::FlipLayout("horizontal")
-!y::FlipLayout("vertical")
+<#x::FlipLayout("horizontal")
+<#y::FlipLayout("vertical")
 
 ; Workspaces
-!1::FocusWorkspace(0)
-!2::FocusWorkspace(1)
-!3::FocusWorkspace(2)
+<#1::FocusWorkspace(0)
+<#2::FocusWorkspace(1)
+<#3::FocusWorkspace(2)
 
 ; Move windows across workspaces
-!+1::MoveToWorkspace(0)
-!+2::MoveToWorkspace(1)
-!+3::MoveToWorkspace(2)
+<#+1::MoveToWorkspace(0)
+<#+2::MoveToWorkspace(1)
+<#+3::MoveToWorkspace(2)
