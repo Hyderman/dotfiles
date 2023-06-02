@@ -29,6 +29,7 @@ return {
                 "clangd",
                 "lua_ls",
                 "powershell_es",
+                "neocmake",
             })
 
             require("lspconfig").lua_ls.setup {

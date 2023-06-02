@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<esc>", ":noh<return><esc>", { noremap = true })
-vim.keymap.set("v", "j", ":m '>+1<cr>gv=gv")
-vim.keymap.set("v", "k", ":m '<-2<cr>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 vim.keymap.set("n", "<c-d>", "<c-d>zz")
 vim.keymap.set("n", "<c-u>", "<c-u>zz")
 vim.keymap.set("n", "n", "nzzzv")

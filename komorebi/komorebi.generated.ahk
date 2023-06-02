@@ -232,11 +232,11 @@ RunWait('komorebic.exe identify-layered-application exe "WINWORD.EXE"', , "Hide"
 RunWait('komorebic.exe identify-tray-application exe "ModernFlyoutsHost.exe"', , "Hide")
 
 ; Mozilla Firefox
-RunWait('komorebic.exe identify-object-name-change-application exe "firefox.exe"', , "Hide")
-; If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
-RunWait('komorebic.exe identify-tray-application exe "firefox.exe"', , "Hide")
-; Targets invisible windows spawned by Firefox to show tab previews in the taskbar
-RunWait('komorebic.exe float-rule class "MozillaTaskbarPreviewClass"', , "Hide")
+; RunWait('komorebic.exe identify-object-name-change-application exe "firefox.exe"', , "Hide")
+; ; If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
+; RunWait('komorebic.exe identify-tray-application exe "firefox.exe"', , "Hide")
+; ; Targets invisible windows spawned by Firefox to show tab previews in the taskbar
+; RunWait('komorebic.exe float-rule class "MozillaTaskbarPreviewClass"', , "Hide")
 
 ; NVIDIA GeForce Experience
 RunWait('komorebic.exe identify-border-overflow-application exe "NVIDIA GeForce Experience.exe"', , "Hide")

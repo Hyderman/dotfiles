@@ -23,9 +23,9 @@ EnsureNamedWorkspaces(0, "I II III IV V")
 NamedWorkspaceLayout("I", "bsp")
 
 ; Set the gaps around the edge of the screen for a workspace
-NamedWorkspacePadding("I", 10)
+NamedWorkspacePadding("I", 3)
 ; Set the gaps between the containers for a workspace
-NamedWorkspaceContainerPadding("I", 10)
+NamedWorkspaceContainerPadding("I", 3)
 
 ; You can assign specific apps to named workspaces
 ; NamedWorkspaceRule("exe", "Firefox.exe", "III")
@@ -34,11 +34,15 @@ NamedWorkspaceContainerPadding("I", 10)
 InvisibleBorders(7, 0, 14, 7)
 
 ; Uncomment the next lines if you want a visual border around the active window
+; ActiveWindowBorder("enable")
 ; ActiveWindowBorderColour(66, 165, 245, "single")
 ; ActiveWindowBorderColour(256, 165, 66, "stack")
 ; ActiveWindowBorderColour(255, 51, 153, "monocle")
+MouseFollowsFocus("disable")
 
 CompleteConfiguration()
+
+<#+r::ReloadConfiguration()
 
 ; Focus windows
 <#h::Focus("left")
@@ -72,13 +76,14 @@ CompleteConfiguration()
 
 ; Manipulate windows
 <#t::ToggleFloat()
-<#f::ToggleMonocle()
-<#+f::ToggleMaximize()
+; <#f::ToggleMonocle()
+; <#+f::ToggleMaximize()
+
 <#w::Close()
 
 ; Window manager options
-<#+r::Retile()
-<#p::TogglePause()
+; <#+r::Retile()
+<#+p::TogglePause()
 
 ; Layouts
 <#x::FlipLayout("horizontal")

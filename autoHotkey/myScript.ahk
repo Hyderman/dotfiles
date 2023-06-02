@@ -12,3 +12,30 @@
 <^>!k::ï
 <^>!l::ø
 
+<#b:: {
+    if Winexist("ahk_exe firefox.exe")
+        WinActivate
+    else
+        Run "firefox"
+}
+
+<#f:: {
+    state := WinGetMinMax("A")
+    if (state) == 0
+        WinMaximize "A"
+    else 
+        WinRestore "A"
+}
+
+<#m:: {
+    WinMinimize "A"
+}
+
+<#Enter:: {
+    if Winexist("ahk_exe WindowsTerminal.exe")
+        WinActivate
+    else
+        Run("wt.exe")
+        WinWait("ahk_exe WindowsTerminal.exe")
+        WinActivate("ahk_exe WindowsTerminal.exe")
+}
